@@ -1,2 +1,2 @@
 # latihan-javascript
-menyimpan kode latihan javascript
+# Menyimpan kode latihan javascript
