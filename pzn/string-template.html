@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>String Template</title>
+   </head>
+   <body>
+      <script>
+         // menggunakan backtik ``
+         const name = "Irfan";
+         const firstName = "Irfan";
+         const middleName = "Ahmad";
+         const lastName = "Hidayat";
+
+         const templateLama = `Name : ${name}`;
+         const template = `Name : ${firstName} ${middleName} ${lastName}`;
+
+         console.info(templateLama);
+         console.info(template);
+
+         // Expression di String Template
+         const nilai = 90;
+         const template2 = `Name : ${name}, Lulus : ${nilai > 70}`;
+
+         console.info(template2);
+
+         // Multiline string
+         const multiline = `Nama saya Irfan, 
+Seorang Mahasiswa,
+Hobi nonton bola`;
+
+         document.writeln("<pre>");
+         document.writeln(multiline);
+         document.writeln("</pre>");
+      </script>
+   </body>
+</html>
