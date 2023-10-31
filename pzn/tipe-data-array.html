@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Array</title>
+   </head>
+   <body>
+      <script>
+         let arrayKosong = [];
+
+         let arrayNama = ["Irfan", "Ahmad", "Hidayat"];
+
+         //  menambahkan data ke array
+         const names = [];
+         names.push("Irfan");
+         names.push("Ahmad", "Hidayat");
+
+         console.table(names);
+
+         // operasi pada array
+         console.log(names[0]);
+         console.log(names[1]);
+         console.log(names[2]);
+
+         names[0] = "Irfan2";
+
+         console.log(names[0]);
+
+         delete names[1];
+         console.table(names);
+
+         names.push("IrfanLagi");
+         console.table(names);
+
+         names[2] = "diubah";
+         console.table(names);
+
+         names.push(1, 2, 3, 4, 5);
+         console.table(names);
+
+         names.push(["Irfan", "Ahmad"]);
+         console.table(names);
+      </script>
+   </body>
+</html>

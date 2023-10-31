@@ -25,6 +25,16 @@
 
          //  Not a Number
          document.writeln(`<p>${parseInt("salah")}</p>`);
+         document.writeln(`<p>${parseFloat("1.1salah")}</p>`);
+         document.writeln(`<p>${Number("1.1salah")}</p>`);
+
+         const first = Number("salah");
+         const totalNumber = first + 100;
+         document.writeln(`<p>${totalNumber}</p>`); // NaN
+
+         document.writeln(`<p>${isNaN(first)}</p>`);
+         document.writeln(`<p>${isNaN(100)}</p>`);
+         document.writeln(`<p>${isNaN(NaN)}</p>`);
       </script>
    </body>
 </html>
