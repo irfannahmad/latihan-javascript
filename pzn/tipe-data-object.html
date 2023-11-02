@@ -7,9 +7,10 @@
    </head>
    <body>
       <script>
+         // membuat object
          const person = {};
 
-         //  menambah atau mengubah isi object (ubah property / attribute)
+         //  menambah atau mengubah isi object (ubah property / attribute), satu persatu
          person["nama"] = "Irfan";
          person["alamat"] = "Indonesia";
          person["umur"] = 21;
@@ -21,7 +22,18 @@
 
          console.table(person);
 
-         //  membuat object dengan properties
+         //  membuat object dengan properties, langsung
+         const orang = {
+            "nama lengkap": "Ahmad",
+            alamat: "Indonesia",
+            umur: 21,
+         };
+
+         // console.table(orang);
+
+         console.info(`Nama : ${orang["nama lengkap"]}`);
+         console.info(`Alamat : ${orang.alamat}`);
+         console.info(`Umur : ${orang.umur}`);
       </script>
    </body>
 </html>
