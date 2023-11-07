@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Operator Logika di Non Boolean</title>
+   </head>
+   <body>
+      <script>
+         // data falsy (false, 0, -0, "", '', ``, null, undefined, NaN)
+         // OR (mengambil nilai kanan yang truthy, jika tidak ada yang truthy maka yang terakhir diambil)
+         console.log("Hello" || ""); // hello
+         console.log("" || []); // []
+         console.log("0" || "Nol"); // 0 (stirng kosong)
+         console.log(0 || "Nol"); // nol
+         console.log(null || "Null"); // null
+         console.log(undefined || "Undifined"); // undefined
+         console.log(0 || false); // false
+
+         const person = {
+            firstName: "Irfan",
+            lastName: "Hidayat",
+         };
+
+         const name = person.firstName || person.lastName;
+         console.log(name);
+
+         //  DAN && (mengambil nilai pertama yang falsy, jika tidak ada yang falsy, maka yang terakhir yang diambil)
+         console.log("Hello" && ""); // ""
+         console.log("" && []); // ""
+         console.log("0" && "Nol"); // Nol
+         console.log(0 && "Nol"); // 0
+         console.log(null && "NULL"); // null
+         console.log(undefined && "UNDEFINED"); // undefined
+         console.log("undefined" && "null"); // null
+      </script>
+   </body>
+</html>
