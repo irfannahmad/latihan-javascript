@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>OPERATOR In</title>
+   </head>
+   <body>
+      <script>
+         const person = {
+            firstName: "Irfan",
+            lastName: "Hidayat",
+         };
+
+         if ("firstName" in person) {
+            alert(`Hello ${person.firstName}`);
+         } else {
+            alert("Hello");
+         }
+
+         // In operator hanya mengecek sebuah property ada atau tidak, nilai undefined atau null tetap dianggap ada
+         const student = {
+            firstName: "Irfan",
+            middleName: undefined,
+            lastName: "Hidayat",
+         };
+
+         if ("middleName" in student) {
+            alert(`Hello ${student.middleName}`);
+         } else {
+            alert("Hello Student");
+         }
+
+         const names = [null, "Irfan", null];
+         const result = 0 in names;
+         document.writeln(`${result}`); // true
+      </script>
+   </body>
+</html>
