@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>With Statement</title>
+   </head>
+   <body>
+      <script>
+         // sebelum
+         //  const person = {
+         //     firstName: "Irfan",
+         //     middleName: "Ahmad",
+         //     lastName: "Hidayat",
+         //  };
+
+         //  console.log(person.firstName);
+         //  console.log(person.middleName);
+         //  console.log(person.lastName);
+
+         //  sesudah, namun tidak direkomendasikan
+         const person = {
+            firstName: "Irfan",
+            middleName: "Ahmad",
+            lastName: "Hidayat",
+         };
+
+         //  const firstName = "Budi";
+         //  const lastName = "Anjay";
+
+         with (person) {
+            console.log(person.firstName);
+            console.log(person.middleName);
+            console.log(person.lastName);
+         }
+      </script>
+   </body>
+</html>
