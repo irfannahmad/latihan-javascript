@@ -7,14 +7,22 @@
    </head>
    <body>
       <script>
+         // function di variable
          function sayHello(name) {
             document.writeln(`<p>Hello ${name}</p>`);
          }
 
          sayHello("Irfan");
 
-         const say = sayHello; // tidak perlu kurung, jika dipakai maka akan memanggil function
+         const say = sayHello; // (menyimpan function kedalam variable) tidak perlu kurung, jika dipakai maka akan memanggil function
          say("Ahmad");
+
+         function giveMeName(callback) {
+            callback("Irfan"); // seakan akan sayHello("Irfan");
+         }
+
+         giveMeName(sayHello);
+         giveMeName(say); // giveMeName(sayHello);
       </script>
    </body>
 </html>

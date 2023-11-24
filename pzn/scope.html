@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Scope</title>
+   </head>
+   <body>
+      <script>
+         // global scope
+         // bisa diakses dari manampun, tidak seperti php
+         let counter = 0;
+
+         // global scope
+         function hitMe() {
+            // local scope hitMe
+            counter++;
+         }
+
+         // global scope
+         function other() {
+            // local scope other
+         }
+
+         hitMe();
+         hitMe();
+
+         console.info(counter); // 2
+
+         //  local scope
+         //  hanya bisa diakses didalam local scopenya
+         function first() {
+            // local scope first
+            let firstVariable = "First";
+            console.info(firstVariable); // bisa akses
+         }
+
+         function second() {
+            // local scope second
+            let secondVariable = "second";
+            console.info(firstVariable); // tidak bisa akses
+         }
+
+         first();
+         second();
+
+         // console.info(firstVariable); // error
+         // console.info(secondVariable); // error
+      </script>
+      <script>
+         function third() {
+            let thirdVariable = "third";
+
+            function thirdNested() {
+               console.info(thirdVariable);
+            }
+
+            thirdNested();
+         }
+      </script>
+   </body>
+</html>
